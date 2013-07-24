@@ -1,4 +1,14 @@
 defmodule Teenager do
+  @moduledoc """
+  Bob is a very person. It answers to messages you give him
+  """
+
+  @doc """
+  Returns 'Fine. Be that way.' for silent messages
+  Returns 'Woah, chill out!' for loud messages
+  Returns 'Sure.' for questions
+  Returns 'Whatever.' for everything else
+  """
   def hey(message) do
     cond do
       Message.silent?(message)   -> "Fine. Be that way."
