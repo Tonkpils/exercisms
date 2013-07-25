@@ -11,16 +11,18 @@ class Bob
 end
 
 class Message
-  attr_reader :message
-  def initialize(msg) @message = String(msg) end
+  attr_reader :body
+  def initialize(msg) 
+    @body = String(msg) 
+  end
  
   def silence? 
-    message.empty? 
+    body.empty? 
   end
   def shout? 
-    message.upcase == message 
+    body.upcase == body
   end
   def question? 
-    message.end_with?("?") 
+    body.end_with?("?") 
   end
 end
