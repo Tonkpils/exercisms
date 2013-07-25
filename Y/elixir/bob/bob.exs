@@ -1,6 +1,16 @@
 defmodule Teenager do
   @moduledoc """
-  Bob is a very person. It answers to messages you give him
+  Bob is a very introverted person. It answers to messages you give him
+  in very limited ways :)
+ 
+  iex> Teenager.hey("")
+  "Fine. Be that way."
+  iex> Teenager.hey("YOU ARE SO QUIET!")
+  "Woah, chill out!"
+  iex> Teenager.hey("Want to talk?")
+  "Sure."
+  iex> Teenager.hey("I don't want to talk")
+  "Whatever."
   """
 
   @doc """
