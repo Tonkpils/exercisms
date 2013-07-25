@@ -15,12 +15,12 @@ class Message
   def initialize(msg) @message = String(msg) end
  
   def silence? 
-    @message.empty? 
+    message.empty? 
   end
   def shout? 
-    @message.upcase == @message 
+    message.upcase == message 
   end
   def question? 
-    @message.end_with?("?") 
+    message.end_with?("?") 
   end
 end
