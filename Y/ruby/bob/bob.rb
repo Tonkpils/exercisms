@@ -12,10 +12,10 @@ end
 
 class Message
   attr_reader :message
-  def initialize(msg) @message = msg end
+  def initialize(msg) @message = String(msg) end
  
   def silence? 
-    @message.nil? || @message.empty? 
+    @message.empty? 
   end
   def shout? 
     @message.upcase == @message 
