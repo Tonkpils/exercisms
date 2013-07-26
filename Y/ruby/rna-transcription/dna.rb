@@ -1,7 +1,7 @@
 class DNA
   attr_reader :sequence
   def initialize(sequence)
-    @sequence = sequence.gsub("U", "T")
+    @sequence = sequence.tr("U", "T")
   end
 
   def to_rna
@@ -16,7 +16,7 @@ end
 class RNA
   attr_reader :sequence
   def initialize(sequence)
-    @sequence = sequence.gsub("T", "U")
+    @sequence = sequence.tr("T", "U")
   end
 
   def to_dna
