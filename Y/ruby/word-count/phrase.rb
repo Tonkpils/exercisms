@@ -1,8 +1,8 @@
 class Phrase < String
 
   def word_count
-    sanitized_word_list.inject(Hash.new(0)) do |counter, word| 
-      counter[word] += 1 and counter
+    sanitized_word_list.each_with_object(Hash.new(0)) do |word, counter| 
+      counter[word] += 1
     end
   end
 
