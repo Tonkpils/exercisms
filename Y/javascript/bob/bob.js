@@ -1,30 +1,24 @@
 function Bob() {
+
   this.hey = function(message) {
-    if(is_silence(message)) 
-    {
+    if(isSilence(message)) {
       return "Fine, be that way.";
-    }
-    else if(is_scream(message))
-    {
+    } else if(isScream(message)) {
       return "Woah, chill out!";
-    } 
-    else if(is_question(message)) 
-    {
+    } else if(isQuestion(message)) {
       return "Sure";
-    } 
-    else 
-    {
+    } else {
       return "Whatever" 
     }
   };
 
-  var is_silence = function(message){
+  var isSilence = function(message){
     return (message === "");
   };
-  var is_question = function(message){
-    return (message.match("\\?$") == "?");
+  var isQuestion = function(message){
+    return (message.slice(-1) == "?");
   };
-  var is_scream = function(message){
+  var isScream = function(message){
     return (message.toUpperCase() === message);
   };
 
