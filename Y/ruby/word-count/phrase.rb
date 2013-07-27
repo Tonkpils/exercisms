@@ -9,7 +9,7 @@ class Phrase < String
   private
 
   def sanitized_word_list
-    downcase.scan(/[a-z0-9]+/)
+    downcase.scan(/[\w]+/)
   end
 
 end
