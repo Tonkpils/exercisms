@@ -10,12 +10,12 @@
       } else if(isQuestion(message)) {
         return "Sure";
       } else {
-        return "Whatever" 
+        return "Whatever"; 
       }
     };
 
     var isSilence = function(message){
-      return (message === "");
+      return (message == "");
     };
     var isQuestion = function(message){
       return (message.slice(-1) == "?");
@@ -23,6 +23,6 @@
     var isScream = function(message){
       return (message.toUpperCase() === message);
     };
-  };
-  module.exports = Bob
+  }
+  module.exports = Bob;
 }());
