@@ -21,4 +21,4 @@ class Message():
     return self.content == self.content.upper()
 
   def is_query(self):
-    return self.content[-1:] == '?'
+    return self.content.endswith('?')
