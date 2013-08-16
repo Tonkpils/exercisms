@@ -12,13 +12,13 @@ class Bob():
 
 class Message():
   def __init__(self, message):
-    self.message = message
+    self.content = message
   
   def is_silent(self):
-    return self.message == ''
+    return self.content == ''
 
   def is_shout(self):
-    return self.message == self.message.upper()
+    return self.content == self.content.upper()
 
   def is_query(self):
-    return self.message[-1:] == '?'
+    return self.content[-1:] == '?'
