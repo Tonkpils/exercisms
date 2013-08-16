@@ -15,7 +15,7 @@ class Message():
     self.content = message
   
   def is_silent(self):
-    return self.content == ''
+    return not self.content.strip()
 
   def is_shout(self):
     return self.content == self.content.upper()
