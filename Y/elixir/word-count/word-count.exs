@@ -1,10 +1,10 @@
 defmodule Words do
   def count(string) do
-    string |> downcase |> sanitize |> aggregate
+    string |> downcase |> split_words |> aggregate
   end
 
   defp downcase(string), do: String.downcase(string)
-  defp sanitize(string), do: Regex.scan(%r/[\w]+/, string)
+  defp split_words(string), do: Regex.scan(%r/\w+/, string)
   defp aggregate(word_list) do
     Enum.reduce word_list, HashDict.new, fn(word, accumulator) -> 
       accumulator |> update_dictionary word 
