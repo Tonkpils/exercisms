@@ -10,6 +10,7 @@ class Bob():
     else:
       return 'Whatever.'
 
+
 class Message():
   def __init__(self, message):
     self.content = message
@@ -18,7 +19,7 @@ class Message():
     return not self.content.strip()
 
   def is_shout(self):
-    return self.content == self.content.upper()
+    return self.content.isupper()
 
   def is_query(self):
     return self.content.endswith('?')
